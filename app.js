@@ -32,6 +32,10 @@ app.use("/api", taskRouter);
 const poseRouter = require('./routes/poses');
 app.use("/api", poseRouter);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Brainboosters API!");
+});
+
 const PORT = process.env.PORT||5000;
 
 app.listen(PORT, () => {
